@@ -1,0 +1,62 @@
+    
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Piedra, Papel, Tijeras</title>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Juego Piedra Papel o Tijeras.</h1>
+	<script>
+		var usuario = prompt("¿Eliges piedra, papel o tijeras?");
+		var ordenador = Math.random();
+		
+		if (ordenador < 0.34) {
+		    ordenador = "piedra";
+		} else if(ordenador <= 0.67) {
+		    ordenador = "papel";
+		} else {
+		    ordenador = "tijeras";
+		}
+		document.write("<h2> La Opción escogida por el Usuario es : " + usuario  +"</h2>"+"<br/>");
+		document.write("<h2>La Opción escogida del ordenador es : " + ordenador + "</h2>" + "<br/>");
+		
+		
+		if(usuario === ordenador) {
+		    document.write( "¡El restultado es un empate!");
+		}
+		if(usuario === "piedra") {
+		    if(ordenador === "tijeras") {
+                document.write( "piedra gana!");
+		    } else {
+		        if(ordenador === "papel"){
+                    document.write( "papel gana!");
+			    }	
+			}
+		}
+		if(usuario === "papel") {
+		    if(ordenador === "piedra") {
+                document.write( "papel gana!");
+		    } else {
+		        if(ordenador === "tijeras") {
+                    document.write( "tijeras gana!");
+			    }   
+			}
+		}
+		if(usuario === "tijeras") {
+		    if(ordenador === "piedra") {
+                document.write( "piedra gana!");
+		    } else {
+		        if(ordenador === "papel") {
+                    document.write( "tijeras gana!");
+		        }
+		    }
+		}
+    </script>
+    <footer>
+        Sergio Rodríguez
+    </footer>
+</body>
+</html>
